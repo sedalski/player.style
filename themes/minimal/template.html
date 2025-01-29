@@ -273,13 +273,13 @@
 
   <template if="streamtype == 'on-demand'">
     <template if="!breakpointsm">
-      <media-control-bar>
+      <media-control-bar part="media control bar">
         {{>PlayButton}} {{>TimeRange}} {{>MuteButton}} {{>CaptionsButton}} {{>FullscreenButton}}
       </media-control-bar>
     </template>
 
     <template if="breakpointsm">
-      <media-control-bar>
+      <media-control-bar part="media control bar">
         {{>PlayButton}} {{>SeekBackwardButton}} {{>SeekForwardButton}} {{>TimeRange}}
         <template if="breakpointmd">
           <media-time-display></media-time-display>
@@ -291,7 +291,7 @@
   </template>
 
   <template if="streamtype == 'live'">
-    <media-control-bar>
+    <media-control-bar part="media control bar">
       <div class="live-controls-left">
         {{>LiveButton}}
         <template if="!targetlivewindow">
